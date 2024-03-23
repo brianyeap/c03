@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brian <brian@student.42.fr>                +#+  +:+       +#+        */
+/*   By: bryeap <bryeap@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 23:06:26 by brian             #+#    #+#             */
-/*   Updated: 2024/03/22 23:06:43 by brian            ###   ########.fr       */
+/*   Updated: 2024/03/23 14:59:30 by bryeap           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	j;
@@ -24,7 +24,7 @@ char *ft_strcat(char *dest, char *src)
 		dest[i + j] = src[j];
 		j++;
 	}
-    dest[i + j] = '\0';
+	dest[i + j] = '\0';
 	return (dest);
 }
 

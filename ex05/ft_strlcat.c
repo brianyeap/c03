@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brian <brian@student.42.fr>                +#+  +:+       +#+        */
+/*   By: bryeap <bryeap@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 02:05:55 by brian             #+#    #+#             */
-/*   Updated: 2024/03/23 02:58:40 by brian            ###   ########.fr       */
+/*   Updated: 2024/03/23 15:04:03 by bryeap           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-unsigned int ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
 	unsigned int	i;
 
@@ -21,18 +20,18 @@ unsigned int ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
-    
+
 	i = 0;
 	while (dest[i] && i < size)
 		i++;
 	j = 0;
 	while (src[j] && (i + j + 1) < size)
 	{
-		dest[i + j] =  src[j];
+		dest[i + j] = src[j];
 		j++;
 	}
 	dest[i + j] = '\0';

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brian <brian@student.42.fr>                +#+  +:+       +#+        */
+/*   By: bryeap <bryeap@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 01:27:10 by brian             #+#    #+#             */
-/*   Updated: 2024/03/23 02:05:00 by brian            ###   ########.fr       */
+/*   Updated: 2024/03/23 15:02:59 by bryeap           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	j;
-    
+
 	i = 0;
 	if (to_find[0] == '\0')
 		return (str);
@@ -26,7 +26,7 @@ char *ft_strstr(char *str, char *to_find)
 			if (to_find[j + 1] == '\0')
 				return (&str[i]);
 			j++;
-		}	
+		}
 		i++;
 	}
 	return (0);
@@ -42,9 +42,9 @@ int main()
 	char str3[] = "Hello";
 	char str4[] = "foo";
 	
-	printf("'%s' found in '%s' at position: %s\n", str2, str1, ft_strstr(str1, str2));
-	printf("'%s' found in '%s' at position: %s\n", str3, str1, ft_strstr(str1, str3));
-	printf("'%s' found in '%s' at position: %s\n", str4, str1, ft_strstr(str1, str4));
+	printf("position: %s\n", str1, ft_strstr(str1, str2));
+	printf("position: %s\n", str1, ft_strstr(str1, str3));
+	printf("position: %s\n", str1, ft_strstr(str1, str4));
 	
 	return 0;
 }

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brian <brian@student.42.fr>                +#+  +:+       +#+        */
+/*   By: bryeap <bryeap@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 23:06:34 by brian             #+#    #+#             */
-/*   Updated: 2024/03/22 23:06:35 by brian            ###   ########.fr       */
+/*   Updated: 2024/03/23 14:57:12 by bryeap           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
-	
+
 	while (s1[i] == s2[i] && s1[i] && i < n - 1)
 		i++;
 	if (s1[i] == s2[i])
